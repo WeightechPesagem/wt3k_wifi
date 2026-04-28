@@ -79,7 +79,7 @@ class _DeviceScreenState extends State<DeviceScreen> {
         40.0; //Apenas para ajustar os widgets em relação a tamanho da tela.
     _paddingVertical = alturaDaTela / 61.6;
     _paddinPadrao = paddingHorizontal;
-    _fonteSizePeso = larguraDaTela / 5.714286;
+    _fonteSizePeso = larguraDaTela / 6.0;
     _fonteSizeTara = larguraDaTela / 16;
 
     return Scaffold(
@@ -327,9 +327,7 @@ class _DeviceScreenState extends State<DeviceScreen> {
   }
 
   Future<void> _tarar() async {
-    _socket?.close();
-
-    //_enviarComando(Comandos.tarar);
+    _enviarComando(Comandos.tarar);
   }
 
   Future<void> _zerar() async {
